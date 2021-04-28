@@ -8,28 +8,267 @@
     <meta name="description" content="Emergency health suppliers details in your localtiy">
     <meta name="keywords" content="Covid19,Oxygen,Remdesivr,plasma">
 
-    <title>Sanjeevani</title>
+
+
+
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/> 
+    <!--  -->
+
+    <title>SANJEEVANI</title>
 
 
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            background: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            min-height: 100%;
+            margin: 0;
+            line-height: 1.5;
+        }  
+
+        /* Navbar and Sections */
+    :root {
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-white: #fff;
+    --clr-secondary: hsla(182, 63%, 54%);
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    ul {
+    list-style-type: none;
+    }
+    a {
+    text-decoration: none;
+    }
+
+
+    /* navbar */
+
+    .san_head{
+        color: white;
+    }
+
+    nav {
+        background: #0C151C;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    }
+    .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: var(--light-shadow);
+    z-index: 100;
+    color: #000;
+    transition: var(--transition);
+    }
+    .fixed-nav .nav-toggle {
+    color: white;
+    }
+    .fixed-nav .links a {
+    color: white;
+    }
+
+    .nav-header {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    }
+    .nav-toggle {
+    font-size: 1.5rem;
+    color: #0C151C;
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: white;
+    vertical-align: middle;
+    padding-top: 0.20em;
+    }
+    .nav-toggle:hover {
+    color: var(--clr-secondary);
+    }
+
+
+    .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    font-size: 2em;
+    }
+
+    .show-links {
+    height: 200px;
+    }
+
+    .links{
+    text-align: right;
+    }
+
+    .links a {
+    background: #0C151C;
+    color: white;
+    font-size: 22px;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    padding: 15px;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+    }
+
+    .show-link {
+    visibility: visible;
+    z-index: 100;
+    }
+
+    .scroll-link{
+    text-align: end;
+    }
+
+    a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    }
+
+    a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    }
+
+    a:hover:after { 
+    width: 100%; 
+    left: 0; 
+    }
+
+
+
+    /* Media query for navbar in bigger screen */
+    /* Navbar was made with mobile first approach */
+    @media screen and (min-width: 800px) {
+    nav {
+        background: #0C151C;
+    }
+    .nav-center {
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-header {
+        width: auto;
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links-container {
+        height: auto !important;
         
+    }
+    .links {
+        display: flex;
+    }
+    .links a {
+        background: transparent;
+        color: white;
+        font-family: Poppins, sans-serif;
+        font-size: 0.5em;
+        padding: 10px;
+        text-transform: capitalize;
+        letter-spacing: var(--spacing);
+        display: block;
+        transition: var(--transition);
+        margin: 0 1rem;
+        font-weight: bold;
+        padding-bottom: 0.5em;
+    }
+    
+    .san_head{
+        color: #fff;
+    }
+
+    }
+    /*  */      
     </style>
 
 </head>
 
 <body>
-    <header><h1><b>Sanjeevani</b></h1>
-    <nav>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">About Us</a>
-            </li>
-        </ul>
-    </nav>
+    <header id = "home">
+
+        <!-- navbar -->
+        <nav id ="nav">
+            <div class = "nav-center">
+                <!-- nav header -->
+          <div class="nav-header">
+            <h1 class="san_head">
+                <b>SANJEEVANI</b>
+            </h1>
+            <div>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                  </button>
+          </div>
+          </div>
+
+          <!-- links -->
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">HOME</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">ABOUT US</a>
+              </li>
+              <li>
+                <a href="#contact" class="scroll-link">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
+
+            </div>
+        
+        </nav>
+
     </header>
+
     <main>
 
         <div>
@@ -77,5 +316,7 @@
     
       </div>
 </body>
+
+<script src="./app.js"></script>
 
 </html>
