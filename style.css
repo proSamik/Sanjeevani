@@ -1,0 +1,353 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            background: white;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            min-height: 100%;
+            margin: 0;
+            line-height: 1.5;
+        }  
+
+        /* Navbar and Sections */
+    :root {
+    /* darkest grey - used for headings */
+    --clr-grey-1: hsl(209, 61%, 16%);
+    /* grey used for paragraphs */
+    --clr-grey-5: hsl(210, 22%, 49%);
+    --clr-white: #fff;
+    --clr-secondary: hsla(182, 63%, 54%);
+    --transition: all 0.3s linear;
+    --spacing: 0.25rem;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+    --fixed-width: 620px;
+    }
+    html {
+    scroll-behavior: smooth;
+    }
+    ul {
+    list-style-type: none;
+    }
+    a {
+    text-decoration: none;
+    }
+
+
+    /* navbar */
+
+    .san_head{
+        color: white;
+    }
+
+    nav {
+        background: #0C151C;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+    }
+    .fixed-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: var(--light-shadow);
+    z-index: 100;
+    color: #000;
+    transition: var(--transition);
+    }
+    .fixed-nav .nav-toggle {
+    color: white;
+    }
+    .fixed-nav .links a {
+    color: white;
+    }
+
+    .nav-header {
+    width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    }
+    .nav-toggle {
+    font-size: 1.5rem;
+    color: #0C151C;
+    background: transparent;
+    border-color: transparent;
+    transition: var(--transition);
+    cursor: pointer;
+    color: white;
+    vertical-align: middle;
+    padding-top: 0.20em;
+    }
+    .nav-toggle:hover {
+    color: var(--clr-secondary);
+    }
+
+
+    .links-container {
+    height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+    font-size: 2em;
+    }
+
+    .show-links {
+    height: 200px;
+    }
+
+    .links{
+    text-align: right;
+    }
+
+    .links a {
+    background: #0C151C;
+    color: white;
+    font-size: 22px;
+    text-transform: capitalize;
+    letter-spacing: var(--spacing);
+    padding: 15px;
+    transition: var(--transition);
+    font-weight: bold;
+    padding: 0.75rem 0;
+    }
+
+    .show-link {
+    visibility: visible;
+    z-index: 100;
+    }
+
+    .scroll-link{
+    text-align: end;
+    }
+
+    a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    }
+
+    a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+    }
+
+    a:hover:after { 
+    width: 100%; 
+    left: 0; 
+    }
+
+
+
+    /* Media query for navbar in bigger screen */
+    /* Navbar was made with mobile first approach */
+    @media screen and (min-width: 800px) {
+    nav {
+        background: #0C151C;
+    }
+    .nav-center {
+        width: 90vw;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav-header {
+        width: auto;
+        padding: 0;
+    }
+    .nav-toggle {
+        display: none;
+    }
+    .links-container {
+        height: auto !important;
+        
+    }
+    .links {
+        display: flex;
+    }
+    .links a {
+        background: transparent;
+        color: white;
+        font-family: Poppins, sans-serif;
+        font-size: 0.5em;
+        padding: 10px;
+        text-transform: capitalize;
+        letter-spacing: var(--spacing);
+        display: block;
+        transition: var(--transition);
+        margin: 0 1rem;
+        font-weight: bold;
+        padding-bottom: 0.5em;
+    }
+    
+    .san_head{
+        color: #fff;
+    }
+
+    }
+    /*  */  
+
+
+.search
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    
+}
+
+.search_bar
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+   
+    .formOfOptions
+    {
+        padding: 10px 12px 10px 12px; 
+    }
+    
+.oxyblood
+    {
+        background: #0C151C;
+        color: #fff;
+        display: block;
+        padding: 10px 12px 10px 12px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 60px;
+        cursor: pointer;
+        transition: all 0.5s;
+        box-sizing:content-box;
+        
+    }
+
+.oxyblood:hover
+{
+    cursor: pointer;
+    background-color: #C4C4C4;
+}
+
+.placeSearch::placeholder
+{
+    color: white;
+    text-transform: capitalize;
+    font-size: 18px;
+    padding-left: 42px;
+}
+
+.placeSearch
+{
+    background: #C4C4C4;
+    color: black;
+    padding: 10px 52px 10px 52px;
+    font-size: 18px;
+    align-items: center;
+}
+
+.bloodGroup
+{
+    background: #AB2622;
+        color: #fff;
+        display: block;
+        padding: 0 12px 0 12px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 60px;
+        cursor: pointer;
+        transition: all 0.5s;  
+}
+
+.search_btn
+{
+    margin: 2%;
+}
+
+#searchme
+{
+    background: #000;
+    color: #fff;
+    padding: 20%;
+    border-radius: 10%;
+}
+
+#searchme:hover
+{
+    background: green;
+}
+
+
+.tagLine
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #EEEEEE;
+    padding: 2%;
+    margin: 4% 8% 4% 8%;
+
+    
+}
+
+#tagPara
+{
+    font-family: "Alegreya Sans SC",sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+
+.btn{
+  margin-top: 2%;
+}
+
+.btn_div
+{
+ background: #99211D;
+ font-size: 14px;
+ align-items: center; 
+ font-family: 'Alef', sans-serif;font-style: normal;font-weight: bold;  
+}
+
+.btn_div::after
+{
+    text-decoration: none;
+    background: #99211D;
+    
+}
+
+.purpose
+{
+    background: #EEEEEE;
+    padding: 2%;
+    margin: 0% 8% ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+}
+
+
