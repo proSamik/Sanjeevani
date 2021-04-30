@@ -206,148 +206,200 @@
     }
     /*  */  
 
-
-.search
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5%;
-    
-}
-
-.search_bar
-{
-    display: flex;
-    flex-direction: row;
-    flex: 1;
-    flex-wrap: nowrap;
-    align-items: center;
-}
-   
-    .formOfOptions
+    .search
     {
-        padding: 10px 12px 10px 12px; 
-    }
-    
-.oxyblood
-    {
-        background: #0C151C;
-        color: #fff;
-        display: block;
-        padding: 10px 12px 10px 12px;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 60px;
-        cursor: pointer;
-        transition: all 0.5s;
-        box-sizing:content-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
         
     }
-
-.oxyblood:hover
-{
-    cursor: pointer;
-    background-color: #C4C4C4;
-}
-
-.placeSearch::placeholder
-{
-    color: white;
-    text-transform: capitalize;
-    font-size: 18px;
-    padding-left: 42px;
-}
-
-.placeSearch
-{
-    background: #C4C4C4;
-    color: black;
-    padding: 10px 52px 10px 52px;
-    font-size: 18px;
-    align-items: center;
-}
-
-.bloodGroup
-{
-    background: #AB2622;
-        color: #fff;
-        display: block;
-        padding: 0 12px 0 12px;
-        font-size: 18px;
-        font-weight: 300;
-        line-height: 60px;
+    
+    .search_bar
+    {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+       
+        .formOfOptions
+        {
+            padding: 10px 12px 10px 12px; 
+        }
+        
+    .oxyblood
+        {
+            background: #0C151C;
+            color: #fff;
+            display: block;
+            padding: 10px 12px 10px 12px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 60px;
+            cursor: pointer;
+            transition: all 0.5s;
+            box-sizing:content-box;
+            border-radius: 8%;
+            
+        }
+    
+    .oxyblood:hover
+    {
         cursor: pointer;
-        transition: all 0.5s;  
-}
-
-.search_btn
-{
-    margin: 2%;
-}
-
-#searchme
-{
-    background: #000;
-    color: #fff;
-    padding: 20%;
-    border-radius: 10%;
-}
-
-#searchme:hover
-{
-    background: green;
-}
-
-
-.tagLine
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #EEEEEE;
-    padding: 2%;
-    margin: 4% 8% 4% 8%;
-
+        background-color: #C4C4C4;
+    }
     
-}
-
-#tagPara
-{
-    font-family: "Alegreya Sans SC",sans-serif;
-    font-weight: bold;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-
-.btn{
-  margin-top: 2%;
-}
-
-.btn_div
-{
- background: #99211D;
- font-size: 14px;
- align-items: center; 
- font-family: 'Alef', sans-serif;font-style: normal;font-weight: bold;  
-}
-
-.btn_div::after
-{
-    text-decoration: none;
-    background: #99211D;
+    .placeSearch::placeholder
+    {
+        color: white;
+        text-transform: uppercase;
+        font-size: 18px;
+        align-items: center;
+        padding-left: 25%;
+    }
     
-}
+    .placeSearch
+    {
+        background: #C4C4C4;
+        color: black;
+        padding: 10px 52px 10px 52px;
+        font-size: 18px;
+        align-items: center;
+        width: 600px;
+        border-radius: 4%;
+    }
+    
+    .bloodGroup
+    {
+        background: #AB2622;
+            color: #fff;
+            display: block;
+            padding: 10px 12px 10px 12px; 
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 60px;
+            cursor: pointer;
+            transition: all 0.5s;
+            border-radius: 8%;  
+    }
+    
+    .search_btn
+    {
+        margin: 2%;
+    }
+    
+    #searchme
+    {
+        background: #000;
+        color: #fff;
+        padding: 20%;
+        border-radius: 10%;
+    }
+    
+    #searchme:hover
+    {
+        background: green;
+    }
+    
+    
+    .tagLine
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #EEEEEE;
+        padding: 2%;
+        margin: 4% 8% 4% 8%;
+    
+        
+    }
+    
+    #tagPara
+    {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 10000;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    
+    
+    .btn{
+      margin-top: 2%;
+    }
+    
+    .btn_div
+    {
+     background: #99211D;
+     font-size: 14px;
+     align-items: center; 
+     font-family: 'Alef', sans-serif;font-style: normal;font-weight: bold; 
+     border-radius: 3%; 
+    }
+    
+    .btn_div::after
+    {
+        text-decoration: none;
+        background: #99211D;
+        
+    }
+    
+    .purpose
+    {
+        background: #EEEEEE;
+        padding: 2%;
+        margin: 0% 8% ;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-.purpose
+@media screen and (min-width: 600px ) and (max-width: 720px)
 {
-    background: #EEEEEE;
-    padding: 2%;
-    margin: 0% 8% ;
-    display: flex;
-    flex-direction: column;
-    align-items: center;  
+    .placeSearch{
+        width: 400px;
+    }
+
+    .placeSearch::placeholder
+    {
+        padding-left: 20%;
+    }
+}   
+
+
+
+@media screen and (min-width: 50px) and (max-width: 600px)
+{
+    .search_bar
+    {
+        flex-direction: column;
+        width:100%;
+    }
+
+    .placeSearcDiv
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 2%;
+        width:100%;
+    }
+
+    .placeSearch
+    {   
+        align-items: center;
+        width: 80%;
+        padding: 10px 10px 10px 10px;
+        font-size: 12px;
+    }
+
+    .placeSearch::placeholder
+    {
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        align-items: center;
+        padding-left: 0px;
+    }
 }
-
-
