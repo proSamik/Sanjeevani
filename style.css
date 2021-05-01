@@ -271,7 +271,7 @@
         padding: 10px 52px 10px 52px;
         font-size: 18px;
         align-items: center;
-        width: 600px;
+        width: 500px;
         border-radius: 4%;
     }
     
@@ -372,21 +372,11 @@
         align-items: center;
     }
 
-@media screen and (min-width: 600px ) and (max-width: 720px)
-{
-    .placeSearch{
-        width: 300px;
-    }
-
-    .placeSearch::placeholder
-    {
-        padding-left: 20%;
-    }
-}   
+   
 
 
 
-@media screen and (min-width: 50px) and (max-width: 600px)
+@media screen and (max-width: 799px)
 {
     .search_bar
     {
