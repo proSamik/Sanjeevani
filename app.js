@@ -69,3 +69,9 @@ scrollLinks.forEach((link) => {
 });
    
 
+
+function upperCase(id)
+{
+            id.value=id.value.toUpperCase();
+
+}
